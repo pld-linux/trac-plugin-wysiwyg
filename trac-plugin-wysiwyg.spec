@@ -11,6 +11,9 @@ Source0:	http://trac-hacks.org/changeset/%{rev}/tracwysiwygplugin?old_path=/&fil
 # Source0-md5:	fbc0279bf41cc510e4e4766b2e5a3126
 URL:		http://trac-hacks.org/wiki/TracWysiwygPlugin
 BuildRequires:	python-devel
+BuildRequires:	python-modules
+BuildRequires:	rpm-pythonprov
+BuildRequires:	unzip
 Requires:	trac >= %{trac_ver}
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
