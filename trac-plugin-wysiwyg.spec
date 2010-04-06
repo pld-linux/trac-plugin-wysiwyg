@@ -6,7 +6,7 @@ Version:	0.2
 Release:	1
 License:	BSD
 Group:		Applications/WWW
-Source0:	http://trac-hacks.org/changeset/latest/tracwysiwygplugin?old_path=/&filename=tracwysiwygplugin&format=zip&/%{plugin}plugin.zip
+Source0:	http://trac-hacks.org/changeset/latest/tracwysiwygplugin?old_path=/;filename=tracwysiwygplugin;format=zip;/%{name}-%{version}.zip
 # Source0-md5:	fbc0279bf41cc510e4e4766b2e5a3126
 URL:		http://trac-hacks.org/wiki/TracWysiwygPlugin
 BuildRequires:	python-devel
