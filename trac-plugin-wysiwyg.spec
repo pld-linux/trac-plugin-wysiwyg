@@ -1,4 +1,5 @@
 %define		trac_ver	0.11
+%define		rev		7817
 %define		plugin		wysiwyg
 Summary:	Wysiwyg Plugin for Trac
 Name:		trac-plugin-%{plugin}
@@ -6,7 +7,7 @@ Version:	0.2
 Release:	1
 License:	BSD
 Group:		Applications/WWW
-Source0:	http://trac-hacks.org/changeset/latest/tracwysiwygplugin?old_path=/;filename=tracwysiwygplugin;format=zip;/%{name}-%{version}.zip
+Source0:	http://trac-hacks.org/changeset/%{rev}/tracwysiwygplugin?old_path=/&filename=tracwysiwygplugin&format=zip#/%{name}-%{version}-%{rev}.zip
 # Source0-md5:	fbc0279bf41cc510e4e4766b2e5a3126
 URL:		http://trac-hacks.org/wiki/TracWysiwygPlugin
 BuildRequires:	python-devel
