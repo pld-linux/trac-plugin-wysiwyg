@@ -1,10 +1,13 @@
+# TODO
+# - one of my trac installs failed to load htdocs data and had to make such alias in apache config:
+#   AliasMatch ^/trac/[^/]+/chrome/tracwysiwyg/(.*) /usr/share/python2.6/site-packages/tracwysiwyg/htdocs/$1
 %define		trac_ver	0.11
 %define		rev		7817
 %define		plugin		wysiwyg
 Summary:	Wysiwyg Plugin for Trac
 Name:		trac-plugin-%{plugin}
 Version:	0.2
-Release:	1
+Release:	2
 License:	BSD
 Group:		Applications/WWW
 Source0:	http://trac-hacks.org/changeset/%{rev}/tracwysiwygplugin?old_path=/&filename=tracwysiwygplugin&format=zip#/%{name}-%{version}-%{rev}.zip
@@ -14,7 +17,7 @@ BuildRequires:	python-devel
 BuildRequires:	python-modules
 BuildRequires:	rpm-pythonprov
 BuildRequires:	unzip
-Requires:	trac >= %{trac_ver}
+Requires:	trac >= %{trac_ver}.7-3
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -43,14 +46,7 @@ cd %{trac_ver}
 rm -rf $RPM_BUILD_ROOT
 
 %post
-if [ "$1" = "1" ]; then
-	%banner -e %{name} <<-'EOF'
-	To enable the %{plugin} plugin, add to conf/trac.ini:
-
-	[components]
-	trac%{plugin}.* = enabled
-EOF
-fi
+trac-enableplugin tracwysiwyg.WysiwygModule
 
 %files
 %defattr(644,root,root,755)
