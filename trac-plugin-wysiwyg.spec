@@ -7,7 +7,7 @@
 Summary:	Wysiwyg Plugin for Trac
 Name:		trac-plugin-%{plugin}
 Version:	0.2
-Release:	2
+Release:	3
 License:	BSD
 Group:		Applications/WWW
 Source0:	http://trac-hacks.org/changeset/%{rev}/tracwysiwygplugin?old_path=/&filename=tracwysiwygplugin&format=zip#/%{name}-%{version}-%{rev}.zip
