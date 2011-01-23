@@ -15,6 +15,7 @@ Source0:	http://trac-hacks.org/changeset/latest/tracwysiwygplugin?old_path=/&fil
 URL:		http://trac-hacks.org/wiki/TracWysiwygPlugin
 BuildRequires:	python-devel
 BuildRequires:	python-modules
+BuildRequires:	python-setuptools
 BuildRequires:	rpm-pythonprov
 BuildRequires:	unzip
 Requires:	trac >= %{trac_ver}
